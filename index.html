@@ -1,0 +1,65 @@
+<!-- Text Editor টাইপের একটা লে-আউট বানাবে। সেখানে একটা Textarea থাকবে। সাথে বেশ কিছু বাটন থাকবে। এদের মধ্যে কোনো একটি বাটনে ক্লিক করলে Textarea এর ভিতরের লিখা গুলোর স্টাইল বোল্ড হয়ে যাবে। ঠিক একইভাবে অন্যবাটন গুলো ব্যাবহার করে দেখো ইটালিক, আন্ডারলাইন, লেফট অ্যালাইন, রাইট অ্যালাইন, সেন্টার অ্যালাইন করতে পারো কিনা। এছাড়া একটা নম্বর টাইপের ইনপুট ফিল্ডে ফন্ট সাইজ ইনপুট নিবে। এরপর সে ভ্যালু ব্যাবহার করে টেক্সটের সাইজ পরিবর্তন করবে। আরেকটা নতুন জিনিস ট্রাই করতে পারো। টেক্সট গুলোর কালার পরিবর্তন করার চেষ্টা করে দেখতে পারো। এরজন্য ইনপুট এর Type=”Color” সম্পর্কে একটু জানতে হবে।   -->
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-edito</title>
+    <!-- link of tailwind-----------
+    ----------------------------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- link of daisy UI-------
+    --------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+    
+    
+    
+</head>
+<body>
+    <header>
+       
+
+
+    </header>
+    <main>
+        <section class="bg-blue-200 space-y-4  p-1">
+            <h1 class="text-4xl font-bold text-center text-pink-700 bg-black p-3 rounded-lg">My Text Editor</h1>
+            <div class="flex gap-3 justify-between items-center flex-col space-y-3 md:flex-row">
+                <!--font style  -->
+            <div class="flex gap-5 justify-items-center text-center text-blue-800">
+                <button class="btn btn-lg" id="bold" className="btn btn-active  btn-link text-3xl">B</button>
+                <button class="btn btn-lg" id="italic" className="btn btn-active btn-link text-3xl">I</button>
+                <button class="btn btn-lg" id="underline" className="btn btn-active btn-link text-3xl">U</button>
+            </div>
+            <!-- text align -->
+            <div>
+                <button id="left"  class="bg-red-500 text-white font-bold hover:bg-red-200 px rounded-lg px-4 py-2">left</button>
+                <button id="right" class="bg-slate-600 text-white font-bold hover:bg-slate-400  px rounded-lg px-4 py-2">right</button>
+                <button id="center" class="bg-violet-600 text-white font-bold hover:bg-violet-300 px rounded-lg px-4 py-2">center</button>
+            </div>
+            <!-- input -->
+            <div>
+                <input  class="rounded-lg p-5 py-3 font-bold text-center" type="number" name="" id="font-size">
+                <button id="btn-font" class="bg-slate-700 text-white font-bold hover:bg-slate-300 px rounded-lg px-4 py-2">submit</button>
+
+            </div>
+
+            </div>
+           
+            <div class="p-5">
+                <textarea class="mx-auto w-full rounded-lg  " name="" id="text-Area" cols="10" rows="50"></textarea>
+            </div>
+            
+        </section>
+        
+
+    </main>
+    <!-- link of js -->
+    <script src="./utilities.js"></script>
+    <script src="./textArea.js"></script>
+    
+</body>
+</html>
